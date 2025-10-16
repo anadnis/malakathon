@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análisis Clínico — Visualización IA</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f8fa;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      color: #2E86AB;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      padding: 1.5rem 2rem;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+    }
+
+    canvas {
+      width: 100%;
+      max-height: 400px;
+      margin-top: 1rem;
+    }
+
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .metadata {
+      background: #2E86AB;
+      color: white;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Informe de Análisis Clínico — GPT-4o</h1>
+
+    <div class="metadata">
+      <h3>🕒 Metadata</h3>
+      <p><b>Fecha de análisis:</b> 2025-10-16 19:06:15</p>
+      <p><b>Total de registros:</b> 114</p>
+      <p><b>Modelo IA:</b> gpt-4o</p>
+    </div>
+
+    <div class="card">
+      <h2>Datos Empíricos</h2>
+      <pre>{
+  "tipo": "DATOS_REALES",
+  "fuente": "Base de datos clínica",
+  "estadisticas": {
+    "total_pacientes": 114,
+    "edad_media": 16.912280701754387,
+    "edad_min": 8,
+    "edad_max": 19,
+    "edad_std": 2.2004078604585207,
+    "distribucion_sexo": {
+      "1": 75,
+      "2": 39
+    },
+    "casos_esquizofrenia": 114,
+    "tasa_esquizofrenia": 100.0,
+    "distribucion_edad": {
+      "0-10 años": {
+        "total": 1,
+        "casos_esquizofrenia": 1,
+        "tasa": 100.0
+      },
+      "11-15 años": {
+        "total": 21,
+        "casos_esquizofrenia": 21,
+        "tasa": 100.0
+      },
+      "16-19 años": {
+        "total": 92,
+        "casos_esquizofrenia": 92,
+        "tasa": 100.0
+      }
+    },
+    "esquizofrenia_por_sexo": {
+      "1": {
+        "total": 75,
+        "casos_esquizofrenia": 75,
+        "tasa": 100.0,
+        "edad_media": 17.466666666666665
+      },
+      "2": {
+        "total": 39,
+        "casos_esquizofrenia": 39,
+        "tasa": 100.0,
+        "edad_media": 15.846153846153847
+      }
+    },
+    "correlaciones": {
+      "edad_esquizofrenia": NaN
+    },
+    "categoria_diagnostico": "Esquizofrenia, trastornos esquizotípicos y trastornos delirantes"
+  },
+  "visualizacion": {
+    "color": "#2E86AB",
+    "icono": "database"
+  }
+}</pre>
+    </div>
+
+    <div class="card">
+      <h2>Insights Generados por IA</h2>
+      <pre>{
+  "tipo": "GENERADO_POR_IA",
+  "fuente": "Análisis OpenAI GPT-4o",
+  "contenido": {
+    "patrones_demograficos": [
+      "La mayoría de los casos diagnosticados se encuentran en el grupo de edad de 16-19 años, con 92 casos (80.7%).",
+      "Existe una mayor prevalencia de diagnósticos en pacientes de sexo 1, con 75 casos (65.8%).",
+      "La edad promedio de diagnóstico es de 16.91 años, con una desviación estándar de 2.20 años."
+    ],
+    "factores_asociados": [
+      "Mayor prevalencia en adolescentes mayores (16-19 años).",
+      "Predominio en pacientes de sexo 1."
+    ],
+    "analisis_comparativo": {
+      "por_edad": "El grupo de 16-19 años presenta la mayor cantidad de casos, lo que sugiere un aumento en la detección o aparición de síntomas en esta etapa.",
+      "por_sexo": "Los pacientes de sexo 1 tienen una edad media de diagnóstico más alta (17.5 años) en comparación con los de sexo 2 (15.8 años)."
+    },
+    "proyeccion_6_meses": {
+      "nuevos_casos_estimados": 5,
+      "tasa_crecimiento": 0.0439,
+      "confianza": "media",
+      "justificacion": "Basado en la distribución actual y la concentración de casos en el grupo de 16-19 años, se espera un crecimiento moderado."
+    },
+    "recomendaciones": [
+      "Implementar programas de detección temprana en adolescentes, especialmente en el grupo de 16-19 años.",
+      "Realizar seguimiento regular y apoyo psicosocial para pacientes de sexo 1 debido a su mayor prevalencia.",
+      "Desarrollar intervenciones específicas para pacientes de sexo 2, considerando su menor edad promedio de diagnóstico."
+    ],
+    "grupos_prioritarios": [
+      "Adolescentes de 16-19 años, debido a su alta representación en los diagnósticos (80.7%).",
+      "Pacientes de sexo 1, dado su predominio en la muestra (65.8%)."
+    ],
+    "insights_adicionales": [
+      "La concentración de casos en adolescentes mayores sugiere que los síntomas pueden intensificarse o ser más fácilmente detectables en esta etapa.",
+      "La diferencia en la edad media de diagnóstico entre sexos podría indicar variaciones en la presentación o detección de síntomas."
+    ]
+  },
+  "visualizacion": {
+    "color": "#A23B72",
+    "icono": "brain"
+  }
+}</pre>
+    </div>
+
+    <div class="card">
+      <h2>Visualizaciones Interactivas</h2>
+      <div class="charts">
+        <div>
+          <h3>Distribución por Edad</h3>
+          <canvas id="chartEdad"></canvas>
+        </div>
+        <div>
+          <h3>Distribución por Sexo</h3>
+          <canvas id="chartSexo"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>JSON Completo</h2>
+      <pre>{
+  "metadata": {
+    "fecha_analisis": "2025-10-16 19:06:15",
+    "total_registros": 114,
+    "modelo_ia": "gpt-4o"
+  },
+  "datos_empiricos": {
+    "tipo": "DATOS_REALES",
+    "fuente": "Base de datos clínica",
+    "estadisticas": {
+      "total_pacientes": 114,
+      "edad_media": 16.912280701754387,
+      "edad_min": 8,
+      "edad_max": 19,
+      "edad_std": 2.2004078604585207,
+      "distribucion_sexo": {
+        "1": 75,
+        "2": 39
+      },
+      "casos_esquizofrenia": 114,
+      "tasa_esquizofrenia": 100.0,
+      "distribucion_edad": {
+        "0-10 años": {
+          "total": 1,
+          "casos_esquizofrenia": 1,
+          "tasa": 100.0
+        },
+        "11-15 años": {
+          "total": 21,
+          "casos_esquizofrenia": 21,
+          "tasa": 100.0
+        },
+        "16-19 años": {
+          "total": 92,
+          "casos_esquizofrenia": 92,
+          "tasa": 100.0
+        }
+      },
+      "esquizofrenia_por_sexo": {
+        "1": {
+          "total": 75,
+          "casos_esquizofrenia": 75,
+          "tasa": 100.0,
+          "edad_media": 17.466666666666665
+        },
+        "2": {
+          "total": 39,
+          "casos_esquizofrenia": 39,
+          "tasa": 100.0,
+          "edad_media": 15.846153846153847
+        }
+      },
+      "correlaciones": {
+        "edad_esquizofrenia": NaN
+      },
+      "categoria_diagnostico": "Esquizofrenia, trastornos esquizotípicos y trastornos delirantes"
+    },
+    "visualizacion": {
+      "color": "#2E86AB",
+      "icono": "database"
+    }
+  },
+  "insights_ia": {
+    "tipo": "GENERADO_POR_IA",
+    "fuente": "Análisis OpenAI GPT-4o",
+    "contenido": {
+      "patrones_demograficos": [
+        "La mayoría de los casos diagnosticados se encuentran en el grupo de edad de 16-19 años, con 92 casos (80.7%).",
+        "Existe una mayor prevalencia de diagnósticos en pacientes de sexo 1, con 75 casos (65.8%).",
+        "La edad promedio de diagnóstico es de 16.91 años, con una desviación estándar de 2.20 años."
+      ],
+      "factores_asociados": [
+        "Mayor prevalencia en adolescentes mayores (16-19 años).",
+        "Predominio en pacientes de sexo 1."
+      ],
+      "analisis_comparativo": {
+        "por_edad": "El grupo de 16-19 años presenta la mayor cantidad de casos, lo que sugiere un aumento en la detección o aparición de síntomas en esta etapa.",
+        "por_sexo": "Los pacientes de sexo 1 tienen una edad media de diagnóstico más alta (17.5 años) en comparación con los de sexo 2 (15.8 años)."
+      },
+      "proyeccion_6_meses": {
+        "nuevos_casos_estimados": 5,
+        "tasa_crecimiento": 0.0439,
+        "confianza": "media",
+        "justificacion": "Basado en la distribución actual y la concentración de casos en el grupo de 16-19 años, se espera un crecimiento moderado."
+      },
+      "recomendaciones": [
+        "Implementar programas de detección temprana en adolescentes, especialmente en el grupo de 16-19 años.",
+        "Realizar seguimiento regular y apoyo psicosocial para pacientes de sexo 1 debido a su mayor prevalencia.",
+        "Desarrollar intervenciones específicas para pacientes de sexo 2, considerando su menor edad promedio de diagnóstico."
+      ],
+      "grupos_prioritarios": [
+        "Adolescentes de 16-19 años, debido a su alta representación en los diagnósticos (80.7%).",
+        "Pacientes de sexo 1, dado su predominio en la muestra (65.8%)."
+      ],
+      "insights_adicionales": [
+        "La concentración de casos en adolescentes mayores sugiere que los síntomas pueden intensificarse o ser más fácilmente detectables en esta etapa.",
+        "La diferencia en la edad media de diagnóstico entre sexos podría indicar variaciones en la presentación o detección de síntomas."
+      ]
+    },
+    "visualizacion": {
+      "color": "#A23B72",
+      "icono": "brain"
+    }
+  },
+  "datos_visualizacion": {
+    "distribucion_edad": [
+      {
+        "rango": "0-10 años",
+        "total": 1,
+        "casos": 1,
+        "tasa": 100.0
+      },
+      {
+        "rango": "11-15 años",
+        "total": 21,
+        "casos": 21,
+        "tasa": 100.0
+      },
+      {
+        "rango": "16-19 años",
+        "total": 92,
+        "casos": 92,
+        "tasa": 100.0
+      }
+    ],
+    "distribucion_sexo": [
+      {
+        "sexo": "1",
+        "total": 75,
+        "casos": 75,
+        "tasa": 100.0
+      },
+      {
+        "sexo": "2",
+        "total": 39,
+        "casos": 39,
+        "tasa": 100.0
+      }
+    ],
+    "tasas_prevalencia": {
+      "actual": 100.0,
+      "proyectada": 100.0
+    }
+  }
+}</pre>
+    </div>
+  </div>
+
+  <script>
+    const data = {
+  "metadata": {
+    "fecha_analisis": "2025-10-16 19:06:15",
+    "total_registros": 114,
+    "modelo_ia": "gpt-4o"
+  },
+  "datos_empiricos": {
+    "tipo": "DATOS_REALES",
+    "fuente": "Base de datos clínica",
+    "estadisticas": {
+      "total_pacientes": 114,
+      "edad_media": 16.912280701754387,
+      "edad_min": 8,
+      "edad_max": 19,
+      "edad_std": 2.2004078604585207,
+      "distribucion_sexo": {
+        "1": 75,
+        "2": 39
+      },
+      "casos_esquizofrenia": 114,
+      "tasa_esquizofrenia": 100.0,
+      "distribucion_edad": {
+        "0-10 años": {
+          "total": 1,
+          "casos_esquizofrenia": 1,
+          "tasa": 100.0
+        },
+        "11-15 años": {
+          "total": 21,
+          "casos_esquizofrenia": 21,
+          "tasa": 100.0
+        },
+        "16-19 años": {
+          "total": 92,
+          "casos_esquizofrenia": 92,
+          "tasa": 100.0
+        }
+      },
+      "esquizofrenia_por_sexo": {
+        "1": {
+          "total": 75,
+          "casos_esquizofrenia": 75,
+          "tasa": 100.0,
+          "edad_media": 17.466666666666665
+        },
+        "2": {
+          "total": 39,
+          "casos_esquizofrenia": 39,
+          "tasa": 100.0,
+          "edad_media": 15.846153846153847
+        }
+      },
+      "correlaciones": {
+        "edad_esquizofrenia": NaN
+      },
+      "categoria_diagnostico": "Esquizofrenia, trastornos esquizotípicos y trastornos delirantes"
+    },
+    "visualizacion": {
+      "color": "#2E86AB",
+      "icono": "database"
+    }
+  },
+  "insights_ia": {
+    "tipo": "GENERADO_POR_IA",
+    "fuente": "Análisis OpenAI GPT-4o",
+    "contenido": {
+      "patrones_demograficos": [
+        "La mayoría de los casos diagnosticados se encuentran en el grupo de edad de 16-19 años, con 92 casos (80.7%).",
+        "Existe una mayor prevalencia de diagnósticos en pacientes de sexo 1, con 75 casos (65.8%).",
+        "La edad promedio de diagnóstico es de 16.91 años, con una desviación estándar de 2.20 años."
+      ],
+      "factores_asociados": [
+        "Mayor prevalencia en adolescentes mayores (16-19 años).",
+        "Predominio en pacientes de sexo 1."
+      ],
+      "analisis_comparativo": {
+        "por_edad": "El grupo de 16-19 años presenta la mayor cantidad de casos, lo que sugiere un aumento en la detección o aparición de síntomas en esta etapa.",
+        "por_sexo": "Los pacientes de sexo 1 tienen una edad media de diagnóstico más alta (17.5 años) en comparación con los de sexo 2 (15.8 años)."
+      },
+      "proyeccion_6_meses": {
+        "nuevos_casos_estimados": 5,
+        "tasa_crecimiento": 0.0439,
+        "confianza": "media",
+        "justificacion": "Basado en la distribución actual y la concentración de casos en el grupo de 16-19 años, se espera un crecimiento moderado."
+      },
+      "recomendaciones": [
+        "Implementar programas de detección temprana en adolescentes, especialmente en el grupo de 16-19 años.",
+        "Realizar seguimiento regular y apoyo psicosocial para pacientes de sexo 1 debido a su mayor prevalencia.",
+        "Desarrollar intervenciones específicas para pacientes de sexo 2, considerando su menor edad promedio de diagnóstico."
+      ],
+      "grupos_prioritarios": [
+        "Adolescentes de 16-19 años, debido a su alta representación en los diagnósticos (80.7%).",
+        "Pacientes de sexo 1, dado su predominio en la muestra (65.8%)."
+      ],
+      "insights_adicionales": [
+        "La concentración de casos en adolescentes mayores sugiere que los síntomas pueden intensificarse o ser más fácilmente detectables en esta etapa.",
+        "La diferencia en la edad media de diagnóstico entre sexos podría indicar variaciones en la presentación o detección de síntomas."
+      ]
+    },
+    "visualizacion": {
+      "color": "#A23B72",
+      "icono": "brain"
+    }
+  },
+  "datos_visualizacion": {
+    "distribucion_edad": [
+      {
+        "rango": "0-10 años",
+        "total": 1,
+        "casos": 1,
+        "tasa": 100.0
+      },
+      {
+        "rango": "11-15 años",
+        "total": 21,
+        "casos": 21,
+        "tasa": 100.0
+      },
+      {
+        "rango": "16-19 años",
+        "total": 92,
+        "casos": 92,
+        "tasa": 100.0
+      }
+    ],
+    "distribucion_sexo": [
+      {
+        "sexo": "1",
+        "total": 75,
+        "casos": 75,
+        "tasa": 100.0
+      },
+      {
+        "sexo": "2",
+        "total": 39,
+        "casos": 39,
+        "tasa": 100.0
+      }
+    ],
+    "tasas_prevalencia": {
+      "actual": 100.0,
+      "proyectada": 100.0
+    }
+  }
+};
+
+    // Crear gráfico de distribución por edad
+    const ctxEdad = document.getElementById('chartEdad').getContext('2d');
+    new Chart(ctxEdad, {
+      type: 'bar',
+      data: {
+        labels: data.datos_visualizacion?.distribucion_edad?.map(d => d.rango) || [],
+        datasets: [{
+          label: 'Casos de esquizofrenia',
+          data: data.datos_visualizacion?.distribucion_edad?.map(d => d.casos) || [],
+          backgroundColor: '#2E86AB',
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true, title: { display: true, text: 'Número de casos' } },
+          x: { title: { display: true, text: 'Rango de edad' } }
+        }
+      }
+    });
+
+    // Crear gráfico de distribución por sexo
+    const ctxSexo = document.getElementById('chartSexo').getContext('2d');
+    new Chart(ctxSexo, {
+      type: 'pie',
+      data: {
+        labels: (data.datos_visualizacion?.distribucion_sexo || []).map(d => 'Sexo ' + d.sexo),
+        datasets: [{
+          data: (data.datos_visualizacion?.distribucion_sexo || []).map(d => d.casos),
+          backgroundColor: ['#A23B72', '#2E86AB']
+        }]
+      },
+      options: {
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
