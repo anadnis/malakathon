@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "fecha_analisis": "2025-10-17 02:11:52",
+    "total_registros": 43,
+    "modelo_ia": "gpt-4o",
+    "fuente_datos": "Oracle Database"
+  },
+  "datos_empiricos": {
+    "tipo": "DATOS_REALES",
+    "fuente": "Base de datos Oracle - Tabla SALUDMENTAL",
+    "estadisticas": {
+      "total_pacientes": 43,
+      "edad_media": 16.953488372093023,
+      "edad_min": 11,
+      "edad_max": 19,
+      "edad_std": 2.0811339442499106,
+      "distribucion_sexo": {
+        "1": 29,
+        "2": 14
+      },
+      "casos_esquizofrenia": 43,
+      "tasa_esquizofrenia": 100.0,
+      "distribucion_edad": {
+        "11-15 años": {
+          "total": 7,
+          "casos_esquizofrenia": 7,
+          "tasa": 100.0
+        },
+        "16-19 años": {
+          "total": 36,
+          "casos_esquizofrenia": 36,
+          "tasa": 100.0
+        }
+      },
+      "esquizofrenia_por_sexo": {
+        "1": {
+          "total": 29,
+          "casos_esquizofrenia": 29,
+          "tasa": 100.0,
+          "edad_media": 17.344827586206897
+        },
+        "2": {
+          "total": 14,
+          "casos_esquizofrenia": 14,
+          "tasa": 100.0,
+          "edad_media": 16.142857142857142
+        }
+      },
+      "correlaciones": {
+        "edad_esquizofrenia": NaN
+      },
+      "categoria_diagnostico": "Esquizofrenia, trastornos esquizotípicos y trastornos delirantes"
+    },
+    "visualizacion": {
+      "color": "#2E86AB",
+      "icono": "database"
+    }
+  },
+  "insights_ia": {
+    "tipo": "GENERADO_POR_IA",
+    "fuente": "Análisis OpenAI GPT-4o",
+    "contenido": {
+      "patrones_demograficos": [
+        "La mayoría de los casos diagnosticados se encuentran en el grupo de edad de 16-19 años, representando el 83.7% del total.",
+        "El sexo 1 (presumiblemente masculino) representa el 67.4% de los casos, indicando una mayor prevalencia en este grupo.",
+        "La edad promedio de diagnóstico es de 16.95 años, con una desviación estándar de 2.08 años."
+      ],
+      "factores_asociados": [
+        "Mayor prevalencia en el grupo de edad de 16-19 años.",
+        "Mayor prevalencia en el sexo 1, que podría indicar un factor de riesgo asociado al género."
+      ],
+      "analisis_comparativo": {
+        "por_edad": "El grupo de 16-19 años tiene una mayor representación en los diagnósticos, lo que podría sugerir un aumento de riesgo con la edad dentro de este rango.",
+        "por_sexo": "El sexo 1 presenta una mayor incidencia en comparación con el sexo 2, con una diferencia del 34.8%."
+      },
+      "proyeccion_6_meses": {
+        "nuevos_casos_estimados": 5,
+        "tasa_crecimiento": 0.116,
+        "confianza": "media",
+        "justificacion": "Basado en la distribución actual y la falta de correlación clara con la edad, se estima un crecimiento moderado en nuevos diagnósticos."
+      },
+      "recomendaciones": [
+        "Implementar programas de monitoreo regular para adolescentes de 16-19 años.",
+        "Desarrollar intervenciones específicas para el sexo 1, dada su mayor prevalencia.",
+        "Fomentar la educación sobre salud mental en escuelas para detectar signos tempranos."
+      ],
+      "grupos_prioritarios": [
+        "Adolescentes de 16-19 años, dado su alto porcentaje de casos diagnosticados.",
+        "Pacientes del sexo 1, debido a su mayor representación en los diagnósticos."
+      ],
+      "insights_adicionales": [
+        "La falta de correlación clara entre la edad y la esquizofrenia sugiere que otros factores no medidos podrían estar influyendo.",
+        "La concentración de casos en el grupo de 16-19 años podría estar relacionada con cambios hormonales o sociales típicos de esta etapa."
+      ]
+    },
+    "visualizacion": {
+      "color": "#A23B72",
+      "icono": "brain"
+    }
+  },
+  "datos_visualizacion": {
+    "distribucion_edad": [
+      {
+        "rango": "11-15 años",
+        "total": 7,
+        "casos": 7,
+        "tasa": 100.0
+      },
+      {
+        "rango": "16-19 años",
+        "total": 36,
+        "casos": 36,
+        "tasa": 100.0
+      }
+    ],
+    "distribucion_sexo": [
+      {
+        "sexo": "1",
+        "total": 29,
+        "casos": 29,
+        "tasa": 100.0
+      },
+      {
+        "sexo": "2",
+        "total": 14,
+        "casos": 14,
+        "tasa": 100.0
+      }
+    ],
+    "tasas_prevalencia": {
+      "actual": 100.0,
+      "proyectada": 0.116
+    }
+  }
+}
